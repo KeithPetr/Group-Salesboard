@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  color: #ffffff;
+  background-color: lightgrey
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  border: 3px solid #ffffff;
+  border-radius: 10px;
+  margin: 50px auto;
+  min-width: 320px;
+  max-width: 480px;
+  border: 1px solid red;
+  background: #111827;
+;
+}
+
+img {
+  width: 50%;
+  border-radius: 50%;
+  border: 5px solid #44354a;
+  margin-bottom: 1em;
+}
+
+.sales-buttons {
+  display: flex;
+  border: 1px solid #44354a;
+  width: 60%;
+  justify-content: space-between;
+}
+
+.sales-buttons > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #9e4770;
+  width: 40%;
+  min-width: 100px;
+  height: 40px;
+  font-size: 1.4rem;
+  border-radius: 20px;
+  border: none;
+  text-shadow: 0 0 1px black;
+}
+
+.total-text, .sales-text, .achievements-text {
+    font-size: 1.4rem;
+}
+
+.display-div,
+.total {
+  background: #44354a;
+  width: 100%;
+  height: 40px;
+  padding: 0.5em 0;
+  border-radius: 20px;
+  text-shadow: 0 0 1px black;
+}
+
+.reset {
+  margin: 0 0 0.75em 0;
+  padding: 0.7em 0.8em;
+  border-radius: 20px;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  max-width: 210px;
+}
