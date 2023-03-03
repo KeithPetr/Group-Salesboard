@@ -43,42 +43,11 @@ const productFire = {
 };
 
 /* EVENT LISTENERS */
-starBtn.addEventListener("click", function () {
-  totalSales++;
-  salesCount.textContent += productStar.emoji;
-  salesTitle.textContent = `Live Sales - ${totalSales}`;
+starBtn.addEventListener("click", addStar);
 
-  totalRevenue += productStar.revenue;
-  totalCommission += productStar.commission;
+fireBtn.addEventListener("click", addFire);
 
-  revenue.textContent = totalRevenue;
-  commission.textContent = totalCommission;
-  checkForAchievements();
-});
-
-fireBtn.addEventListener("click", function () {
-  totalSales++;
-  salesCount.textContent += productFire.emoji;
-  salesTitle.textContent = `Live Sales - ${totalSales}`;
-
-  totalRevenue += productFire.revenue;
-  totalCommission += productFire.commission;
-
-  revenue.textContent = totalRevenue;
-  commission.textContent = totalCommission;
-  checkForAchievements();
-});
-
-resetSalesBtn.addEventListener("click", function () {
-  salesTitle.textContent = `Live Sales`;
-  salesCount.textContent = "";
-  achievementsEl.textContent = "";
-  revenue.textContent = "";
-  commission.textContent = "";
-  totalSales = 0;
-  totalRevenue = 0;
-  totalCommission = 0;
-});
+resetSalesBtn.addEventListener("click", resetSales);
 
 /* LOGGING ACHIEVEMENTS FUNCTION */
 function checkForAchievements() {
@@ -93,4 +62,37 @@ function checkForAchievements() {
   if (totalSales > 15) {
     achievementsCount.textContent += achievementsArr[2];
   }
+}
+
+function resetSales() {
+  salesTitle.textContent = `Live Sales`;
+  salesCount.textContent = "";
+  achievementsCount.textContent = "";
+  revenue.textContent = "";
+  commission.textContent = "";
+  totalSales = 0;
+  totalRevenue = 0;
+  totalCommission = 0;
+}
+
+function addStar() {
+  totalSales++;
+  salesCount.textContent += productStar.emoji;
+  salesTitle.textContent = `Live Sales - ${totalSales}`;
+  totalRevenue += productStar.revenue;
+  totalCommission += productStar.commission;
+  revenue.textContent = totalRevenue;
+  commission.textContent = totalCommission;
+  checkForAchievements();
+}
+
+function addFire() {
+  totalSales++;
+  salesCount.textContent += productFire.emoji;
+  salesTitle.textContent = `Live Sales - ${totalSales}`;
+  totalRevenue += productFire.revenue;
+  totalCommission += productFire.commission;
+  revenue.textContent = totalRevenue;
+  commission.textContent = totalCommission;
+  checkForAchievements();
 }
