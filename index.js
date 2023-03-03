@@ -42,34 +42,9 @@ const productFire = {
   commission: 75,
 };
 
-/* EVENT LISTENERS */
-starBtn.addEventListener("click", function () {
-  totalSales++;
-  salesCount.textContent += productStar.emoji;
-  salesTitle.textContent = `Live Sales - ${totalSales}`;
+/* FUNCTIONS */
 
-  totalRevenue += productStar.revenue;
-  totalCommission += productStar.commission;
-
-  revenue.textContent = totalRevenue;
-  commission.textContent = totalCommission;
-  checkForAchievements();
-});
-
-fireBtn.addEventListener("click", function () {
-  totalSales++;
-  salesCount.textContent += productFire.emoji;
-  salesTitle.textContent = `Live Sales - ${totalSales}`;
-
-  totalRevenue += productFire.revenue;
-  totalCommission += productFire.commission;
-
-  revenue.textContent = totalRevenue;
-  commission.textContent = totalCommission;
-  checkForAchievements();
-});
-
-resetSalesBtn.addEventListener("click", function () {
+function resetSales() {
   salesTitle.textContent = `Live Sales`;
   salesCount.textContent = "";
   achievementsCount.textContent = "";
@@ -78,9 +53,30 @@ resetSalesBtn.addEventListener("click", function () {
   totalSales = 0;
   totalRevenue = 0;
   totalCommission = 0;
-});
+}
 
-/* LOGGING ACHIEVEMENTS FUNCTION */
+function addStar() {
+  totalSales++;
+  salesCount.textContent += productStar.emoji;
+  salesTitle.textContent = `Live Sales - ${totalSales}`;
+  totalRevenue += productStar.revenue;
+  totalCommission += productStar.commission;
+  revenue.textContent = totalRevenue;
+  commission.textContent = totalCommission;
+  checkForAchievements();
+}
+
+function addFire() {
+  totalSales++;
+  salesCount.textContent += productFire.emoji;
+  salesTitle.textContent = `Live Sales - ${totalSales}`;
+  totalRevenue += productFire.revenue;
+  totalCommission += productFire.commission;
+  revenue.textContent = totalRevenue;
+  commission.textContent = totalCommission;
+  checkForAchievements();
+}
+
 function checkForAchievements() {
   if (productStar.revenue === 200 || productFire.revenue === 300) {
     achievementsCount.textContent = achievementsArr[0];
@@ -94,3 +90,10 @@ function checkForAchievements() {
     achievementsCount.textContent += achievementsArr[2];
   }
 }
+
+/* EVENT LISTENERS */
+starBtn.addEventListener("click", addStar);
+
+fireBtn.addEventListener("click", addFire);
+
+resetSalesBtn.addEventListener("click", resetSales);
