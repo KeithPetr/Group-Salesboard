@@ -42,27 +42,7 @@ const productFire = {
   commission: 75,
 };
 
-/* EVENT LISTENERS */
-starBtn.addEventListener("click", addStar);
-
-fireBtn.addEventListener("click", addFire);
-
-resetSalesBtn.addEventListener("click", resetSales);
-
-/* LOGGING ACHIEVEMENTS FUNCTION */
-function checkForAchievements() {
-  if (productStar.revenue === 200 || productFire.revenue === 300) {
-    achievementsCount.textContent = achievementsArr[0];
-  }
-
-  if (totalRevenue > 2500) {
-    achievementsCount.textContent += achievementsArr[1];
-  }
-  //note: put greater than 15 instead of === 15 or it will provide the trophy at the count of 14
-  if (totalSales > 15) {
-    achievementsCount.textContent += achievementsArr[2];
-  }
-}
+/* FUNCTIONS */
 
 function resetSales() {
   salesTitle.textContent = `Live Sales`;
@@ -96,3 +76,24 @@ function addFire() {
   commission.textContent = totalCommission;
   checkForAchievements();
 }
+
+function checkForAchievements() {
+  if (productStar.revenue === 200 || productFire.revenue === 300) {
+    achievementsCount.textContent = achievementsArr[0];
+  }
+
+  if (totalRevenue > 2500) {
+    achievementsCount.textContent += achievementsArr[1];
+  }
+  //note: put greater than 15 instead of === 15 or it will provide the trophy at the count of 14
+  if (totalSales > 15) {
+    achievementsCount.textContent += achievementsArr[2];
+  }
+}
+
+/* EVENT LISTENERS */
+starBtn.addEventListener("click", addStar);
+
+fireBtn.addEventListener("click", addFire);
+
+resetSalesBtn.addEventListener("click", resetSales);
