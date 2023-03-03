@@ -16,27 +16,25 @@
 <body class="flex-col">
     <div class="toggle">
         <input type="checkbox" id="toggle" title="Dark/Light Mode">
-        <label id="label" class="dark-toggle toggle-background" for="toggle"></label>          
+        <label id="label" class="dark-toggle toggle-background" for="toggle">Dark Mode</label>          
     </div>
     <div class="flex-col container" id="container">
         <h1>Salesboard 🔔</h1>
-        <img class="img-employee" src="./images/picture.jpg" alt="generic employee headshot"/>
-        <div>
-            <button id="btn-star" type="button"><img class="flex-col"  
-                src="./images/star.png" alt="image of a star"></button>
-            <button id="btn-fire" type="button"><img class="flex-col"
-                src="./images/fire.png" alt="image of a fire"></button>
+        <img class="img-employee" src="./images/Keith-pic.jpg" alt="generic employee headshot"/>
+        <div class="sales-buttons">
+            <button id="btn-star" type="button">⭐</button>
+            <button id="btn-fire" type="button">🔥</button>
         </div>
         <div class="flex-row">
             <p class="sales-text" id="sales-text">Live Sales -&nbsp</p>
             <p id="sales-count"></p>
         </div>
-        <p class="display-div live" id="sales"></p>
+        <div class="display-div live" id="sales"></div>
         <div class="flex-row">
             <p class="achievements-text">Live Achievements -&nbsp</p>
             <p id="achievements-count"></p>
         </div>
-        <p class="display-div live" id="achievements"></p>
+        <div class="display-div live" id="achievements"></div>
         <div class="flex-row">
             <div class="flex-col">
                 <p class="total-text">Total Revenue</p>

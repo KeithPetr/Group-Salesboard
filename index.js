@@ -12,8 +12,8 @@ const fireBtn = document.getElementById("btn-fire");
 
 const salesTitle = document.getElementById("sales-text");
 
-const salesCount = document.getElementById("sales-count");
-const achievementsCount = document.getElementById("achievements-count");
+const salesCount = document.getElementById("sales");
+const achievementsCount = document.getElementById("achievements");
 
 const revenue = document.getElementById("total-revenue");
 const commission = document.getElementById("total-commission");
@@ -72,7 +72,7 @@ fireBtn.addEventListener("click", function () {
 resetSalesBtn.addEventListener("click", function () {
   salesTitle.textContent = `Live Sales`;
   salesCount.textContent = "";
-  achievementsEl.textContent = "";
+  achievementsCount.textContent = "";
   revenue.textContent = "";
   commission.textContent = "";
   totalSales = 0;
