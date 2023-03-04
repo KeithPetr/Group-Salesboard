@@ -1,57 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Salesboard Solo Project</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<!-- testing if branch works -->
+  <!-- testing if branch works -->
 
-<body class="flex-col">
-    <div class="toggle">
-        <input type="checkbox" id="toggle" title="Dark/Light Mode">
-        <label id="label" class="dark-toggle toggle-background" for="toggle">Dark Mode</label>          
-    </div>
+  <body class="flex-col">
     <div class="flex-col container" id="container">
-        <h1>Salesboard 🔔</h1>
-        <img class="img-employee" src="./images/Keith-pic.jpg" alt="generic employee headshot"/>
-        <div class="sales-buttons">
-            <button id="btn-star" type="button">⭐</button>
-            <button id="btn-fire" type="button">🔥</button>
+        <button class="dark-mode-toggle" id="dark-mode-toggle">🌞</button>
+      <h1>Salesboard 🔔</h1>
+      <img
+        class="img-employee"
+        src="./images/Keith-pic.jpg"
+        alt="generic employee headshot"
+      />
+      <div class="sales-buttons">
+        <button id="btn-star" type="button">⭐</button>
+        <button id="btn-fire" type="button">🔥</button>
+      </div>
+      <div class="flex-row">
+        <p class="sales-text" id="sales-text">Live Sales -&nbsp</p>
+        <p id="sales-count"></p>
+      </div>
+      <div class="display-div live" id="sales"></div>
+      <div class="flex-row">
+        <p class="achievements-text" id="achievements-text">
+          Live Achievements -&nbsp
+        </p>
+        <p id="achievements-count"></p>
+      </div>
+      <div class="display-div live" id="achievements"></div>
+      <div class="flex-row">
+        <div class="flex-col sales-border">
+          <p class="total-text">Total Revenue</p>
+          <div class="display-div total flex-col" id="total-revenue"></div>
         </div>
-        <div class="flex-row">
-            <p class="sales-text" id="sales-text">Live Sales -&nbsp</p>
-            <p id="sales-count"></p>
+        <div class="flex-col sales-border">
+          <p class="total-text">Total Commission</p>
+          <div class="display-div total flex-col" id="total-commission"></div>
         </div>
-        <div class="display-div live" id="sales"></div>
-        <div class="flex-row">
-            <p class="achievements-text" id="achievements-text">Live Achievements -&nbsp</p>
-            <p id="achievements-count"></p>
-        </div>
-        <div class="display-div live" id="achievements"></div>
-        <div class="flex-row">
-            <div class="flex-col">
-                <p class="total-text">Total Revenue</p>
-                <div class="display-div total flex-col" id="total-revenue"></div>
-            </div>
-            <div class="flex-col">
-                <p class="total-text">Total Commission</p>
-                <div class="display-div total flex-col" id="total-commission"></div>
-            </div>
-        </div>
-        <button class="reset" id="btn-reset" type="button">Reset Sales</button>
+      </div>
+      <button class="reset" id="btn-reset" type="button">Reset Sales</button>
     </div>
 
     <script src="index.js"></script>
-
-</body>
+  </body>
 </html>
-
-
-

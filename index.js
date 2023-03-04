@@ -161,3 +161,19 @@ resetSalesBtn.addEventListener("click", resetSales);
 window.onload = function() {
   renderPage()
 };
+
+// ------------Dark Mode -----------------------
+
+const toggleDarkMode = () => {
+  const toggleButton = document.getElementById("dark-mode-toggle");
+  
+  container.classList.toggle("dark-mode");
+  if (container.classList.contains("dark-mode")) {
+    toggleButton.textContent = "🌜"; // Change to moon icon when dark mode is on
+  } else {
+    toggleButton.textContent = "🌞"; // Change to sun icon when dark mode is off
+  }
+}
+
+const darkModeToggle = document.getElementById("dark-mode-toggle");
+darkModeToggle.addEventListener("click", toggleDarkMode);
