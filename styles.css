@@ -6,7 +6,7 @@ body,
 html {
   margin: 0;
   color: #ffffff;
-  background-color: lightgrey
+  background-color: lightgrey;
 }
 
 .flex-col {
@@ -20,9 +20,7 @@ html {
   margin: 50px auto;
   min-width: 320px;
   max-width: 480px;
-  border: 1px solid red;
   background: #111827;
-;
 }
 
 img {
@@ -53,8 +51,10 @@ img {
   text-shadow: 0 0 1px black;
 }
 
-.total-text, .sales-text, .achievements-text {
-    font-size: 1.4rem;
+.total-text,
+.sales-text,
+.achievements-text {
+  font-size: 1.4rem;
 }
 
 .display-div,
