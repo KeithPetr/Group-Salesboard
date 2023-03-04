@@ -169,9 +169,13 @@ const toggleDarkMode = () => {
   
   container.classList.toggle("dark-mode");
   if (container.classList.contains("dark-mode")) {
-    toggleButton.textContent = "🌜"; // Change to moon icon when dark mode is on
+    toggleButton.textContent = "🌞"; // Change to moon icon when dark mode is on
+    document.body.style.backgroundColor = "lightblue"
+    document.getElementById('container').style.backgroundColor = "lightblue"
   } else {
-    toggleButton.textContent = "🌞"; // Change to sun icon when dark mode is off
+    toggleButton.textContent = "🌜"; // Change to sun icon when dark mode is off
+    document.body.style.backgroundColor = "#111827";
+    document.getElementById('container').style.backgroundColor = "#111827"
   }
 }
 

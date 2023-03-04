@@ -2,11 +2,10 @@
   box-sizing: border-box;
 }
 
-body,
 html {
   margin: 0;
   color: #ffffff;
-  background-color: lightgrey;
+  background-color: #FFFFFF;
 }
 
 /* -------------------- Dark Mode ------------------------- */
@@ -46,6 +45,10 @@ html {
 .dark-mode .reset {
   background-color: #c4b5fd;
   color: #1f2937;
+}
+
+.dark-mode .container {
+  background-color: white;
 }
 
 /* ---------------- Main Content -------------------------- */
