@@ -16,6 +16,7 @@ const achievementsCount = document.getElementById("achievements");
 const revenue = document.getElementById("total-revenue");
 const commission = document.getElementById("total-commission");
 const resetSalesBtn = document.getElementById("btn-reset");
+const darkModeToggle = document.getElementById("dark-mode-toggle");
 
 // let totalSales = 0;
 let totalSales = JSON.parse(window.localStorage.getItem('sales')) || [];
@@ -46,6 +47,7 @@ const productFire = {
 };
 
 /* FUNCTIONS */
+// this function renders HTML and value to the DOM
 function renderPage() { 
   totalSales.length === 0 ?
     salesTitle.textContent = "Live Sales" :
@@ -63,59 +65,41 @@ function renderPage() {
     commission.textContent = totalCommission.length > 0 ? totalCommission.reduce((a, b) => (a + b)) : 0;
 }
 
+// this function adds a star to the sales array, and the appropriate revenue/commission to revenue/commission arrays, then checks for achievements
 function addStar() {
-    // totalSales++; changed this to below - sales now push to totalSales array
   totalSales.push(productStar.emoji);
-  // salesCount.textContent += productStar.emoji; moved this to function renderPage()
-  // salesTitle.textContent = `Live Sales - ${totalSales}`; moved this to function renderPage()
-  // totalRevenue += productStar.revenue; changed this to below - revenue now pushes to revenue array
   totalRevenue.push(productStar.revenue);
-  // totalCommission += productStar.commission; changed this to below - commission now pushes to commission array
   totalCommission.push(productStar.commission);
-  // revenue.textContent = totalRevenue; moved this to function renderPage()
-  // commission.textContent = totalCommission; moved this to function renderPage()
   checkForAchievements();
 }
 
+// this function adds a fire to the sales array, and the appropriate revenue/commission to revenue/commission arrays, then checks for achievements
 function addFire() {
-    // totalSales++; changed this to below - sales now push to totalSales array
-    totalSales.push(productFire.emoji);
-  // salesCount.textContent += productFire.emoji;  moved this to function renderPage()
-  // salesTitle.textContent = `Live Sales - ${totalSales}`; moved this to function renderPage()
-  // totalRevenue += productFire.revenue; changed this to below - revenue now pushes to revenue array
+  totalSales.push(productFire.emoji);
   totalRevenue.push(productFire.revenue);
-  // totalCommission += productFire.commission; changed this to below - commission now pushes to commission a
   totalCommission.push(productFire.commission);
-  // revenue.textContent = totalRevenue; moved this to function renderPage()
-  // commission.textContent = totalCommission; moved this to function renderPage()
   checkForAchievements();
 }
 
+//this function runs logics for the achievements array, renders to the DOM and saves value to local storage
 function checkForAchievements() {
   if (totalSales.length === 1) {
     totalAchievements.push(achievementsArr[0]);
   } 
-  // if (productStar.revenue === 200 || productFire.revenue === 300) {
-  //   achievementsCount.textContent = achievementsArr[0];
-  // }
 
   if (totalRevenue.reduce((a, b) => (a + b)) >= 2500 && !totalAchievements.includes(achievementsArr[1])) {
     totalAchievements.push(achievementsArr[1]);
   }
-  // if (totalRevenue > 2500) {
-  //   achievementsCount.textContent += achievementsArr[1];
-  // }
 
   if (totalSales.length === 15) {
     totalAchievements.push(achievementsArr[2]);
   }
-  // if (totalSales > 15) {
-  //   achievementsCount.textContent += achievementsArr[2];
-  // }
+
   renderPage();
   saveToLocal();
 }
 
+// this function clears local storage and resets the values on the page 
 function resetSales() {
   window.localStorage.clear();
   salesTitle.textContent = `Live Sales`;
@@ -124,13 +108,9 @@ function resetSales() {
   achievementsCount.textContent = "";
   revenue.textContent = "";
   commission.textContent = "";
-  // totalSales = 0; this gets set to zero when the items are removed from localStorage
   totalSales = [];
-  //totalAchievements was added to this code
   totalAchievements = [];
-  // totalRevenue = 0; this gets set to zero when the items are removed from localStorage
   totalRevenue = [];
-  // totalCommission = 0; this gets set to zero when the items are removed from localStorage
   totalCommission = [];
 }
 
@@ -143,6 +123,7 @@ function saveToLocal() {
   localStorage.setItem('commission', JSON.stringify(totalCommission));
 }
 
+// this function retrieves a key and a value from local storage
 function getLocalStorage() {
   JSON.parse(window.localStorage.getItem('sales')); //this retrieve totalSales(the array we created) from local storage thru the key name of 'sales'
   JSON.parse(window.localStorage.getItem('achievements'));
@@ -157,7 +138,7 @@ fireBtn.addEventListener("click", addFire);
 
 resetSalesBtn.addEventListener("click", resetSales);
 
-// this function runs when the page reloads or when it refreshes
+// this function runs when the page reloads/refreshes
 window.onload = function() {
   renderPage()
 };
@@ -179,5 +160,5 @@ const toggleDarkMode = () => {
   }
 }
 
-const darkModeToggle = document.getElementById("dark-mode-toggle");
+
 darkModeToggle.addEventListener("click", toggleDarkMode);
