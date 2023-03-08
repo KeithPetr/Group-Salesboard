@@ -6,11 +6,11 @@ records the revenue, achievements, and commission that is
 gained from those sales.
 
 ## Table of Contents
-- Programming 
-- Screenshots
-- Links
-- Requirements
-- Resources
+- [Programming](#programming-languages-used)
+- [Screenshots](#screenshots)
+- [Links](#links)
+- [Project Requirements](#project-requirements)
+- [Resources](#resources)
 
 ## Programming Languages Used
   - HTML
@@ -35,6 +35,6 @@ and objects to create the functionality.
   - Storing the data in the browser
   - Create a button to reset the data
 
-Resources:
+### Resources:
   - [Figma Design Screenshot](https://www.figma.com/file/7sKjOMc3s9LQ2rAnnSbI4V/Salesboard?node-id=0%3A1&t=YZrlLoyluImrFuCw-0)
   - [Scrimba](https://scrimba.com/)
