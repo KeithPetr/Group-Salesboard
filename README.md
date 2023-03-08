@@ -1,4 +1,3 @@
-<<<<<<< SB-readme-change
 # Salesboard
 ## A Scrimba FrontEnd Developer Path Group Project
 A Scrimba FrontEnd Developer Path Group Project
@@ -31,4 +30,3 @@ Resources:
   - [Figma Design Screenshot](https://www.figma.com/file/7sKjOMc3s9LQ2rAnnSbI4V/Salesboard?node-id=0%3A1&t=YZrlLoyluImrFuCw-0)
   - [Scrimba](https://scrimba.com/)
 =======
->>>>>>> main
