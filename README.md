@@ -22,7 +22,7 @@ gained from those sales.
 ![Salesboard-2](https://user-images.githubusercontent.com/91621041/223522104-e0e49729-3da7-4201-804d-3a8515103ab7.png)
 
 ## Links
- [Live Demo]( https://)
+ [Live Demo](https://profound-pixie-49d3cc.netlify.app/)
 
 ## Project Requirements
 The Salesboard project required us to follow a Figma design
