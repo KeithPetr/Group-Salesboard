@@ -57,10 +57,10 @@ function renderPage() {
   achievementsCount.textContent = totalAchievements.join('');
   totalRevenue.length === 0 ?
     revenue.textContent = "" :
-    revenue.textContent = totalRevenue.length > 0 ? totalRevenue.reduce((a, b) => (a + b)) : 0;
+    revenue.textContent = totalRevenue.length > 0 ? "$" + totalRevenue.reduce((a, b) => (a + b)).toLocaleString() : 0;
   totalCommission.length === 0 ?
     commission.textContent = "" :
-    commission.textContent = totalCommission.length > 0 ? totalCommission.reduce((a, b) => (a + b)) : 0;
+    commission.textContent = totalCommission.length > 0 ? "$" + totalCommission.reduce((a, b) => (a + b)).toLocaleString() : 0;
 }
 
 function addStar() {
