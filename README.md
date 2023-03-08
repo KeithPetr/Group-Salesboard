@@ -21,7 +21,7 @@ and build the layout using CSS and HTML from scratch.
 We were required to use JavaScript functions, arrays, loops
 and objects to create the functionality.
 
-This project includes the following 'stretch goals':
+## This project includes the following 'stretch goals':
   - Toggle for light and dark modes
   - Storing the data in the browser
   - Create a button to reset the data
